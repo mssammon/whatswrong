@@ -17,8 +17,8 @@
   </developers>
   <licenses>
     <license>
-      <name>GNU General Public License version 3 (GPLv3)</name>
-      <url>http://www.gnu.org/licenses/gpl.txt</url>
+      <name>Apache 2.0 License</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -79,11 +79,6 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.sf.epsgraphics</groupId>
-      <artifactId>epsgraphics</artifactId>
-      <version>1.2</version>
     </dependency>
     <dependency>
       <groupId>net.sf.trove4j</groupId>

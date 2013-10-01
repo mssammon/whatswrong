@@ -1,9 +1,5 @@
 package com.googlecode.whatswrong;
 
-
-import net.sf.epsgraphics.ColorMode;
-import net.sf.epsgraphics.EpsGraphics;
-
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -317,30 +313,5 @@ public class NLPCanvas extends JPanel {
         //g2d.drawImage(dependencyImage, 0, y, this);
         g2d.drawImage(image, 0, y, this);
         //g2d.drawImage(spanImage, 0, y + image.getHeight() + dependencyImage.getHeight(), this);
-    }
-
-
-    /**
-     * Exports the current graph to EPS.
-     *
-     * @param file the eps file to export to.
-     * @throws IOException if IO goes wrong.
-     */
-    public void exportToEPS(File file) throws IOException {
-
-        EpsGraphics dummy = new EpsGraphics("Title", new ByteArrayOutputStream(),
-                0, 0, 1, 1, ColorMode.BLACK_AND_WHITE);
-
-        NLPInstance filtered = filterInstance();
-
-        Dimension dim = renderer.render(filtered, dummy);
-
-        EpsGraphics g = new EpsGraphics("Title", new FileOutputStream(file), 0, 0,
-                (int) dim.getWidth() + 2, (int) dim.getHeight(), ColorMode.COLOR_RGB);
-
-        renderer.render(filtered, g);
-
-        g.flush();
-        g.close();
     }
 }

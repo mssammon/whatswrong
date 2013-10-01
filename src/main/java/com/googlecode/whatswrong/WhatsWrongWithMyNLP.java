@@ -175,22 +175,6 @@ public class WhatsWrongWithMyNLP extends JPanel {
         //Menu
         JMenuBar menuBar = new JMenuBar();
         JMenu file = new JMenu("File");
-        JMenuItem exportEps = new JMenuItem("Export EPS");
-        final JFileChooser fc = new JFileChooser();
-        exportEps.setAccelerator(KeyStroke.getKeyStroke('E', java.awt.event.InputEvent.ALT_MASK));
-        exportEps.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int returnVal = fc.showSaveDialog(canvas);
-                if (returnVal == JFileChooser.APPROVE_OPTION)
-                    try {
-                        canvas.exportToEPS(fc.getSelectedFile());
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-
-            }
-        });
-        file.add(exportEps);
         file.setMnemonic('F');
 
         JMenuItem quit = new JMenuItem("Quit");
