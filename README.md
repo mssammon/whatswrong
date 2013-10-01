@@ -24,7 +24,7 @@ Compilation
 
 cd into the directory created by extracting the archive, then call
 
-$ mvn clean install
+`$ mvn clean install`
 
 this will create the library version of whatswrong in the target directory (
 note that this version *will not* include any dependend libraries).
@@ -34,7 +34,7 @@ Compiling the executable standalone JAR file
 
 cd into the directory created by extracting the archive, then call
 
-$ mvn assembly:assembly
+`$ mvn assembly:assembly`
 
 this will create the standalone version of whatswrong in the target directory (
 note that this version *will* include any dependend libraries).
@@ -45,8 +45,4 @@ Starting the application
 
 execute
 
-$ java -java whatswrong-x.y.z-standalone.jar
-
-
-
-
+`$ java -java whatswrong-x.y.z-standalone.jar`
