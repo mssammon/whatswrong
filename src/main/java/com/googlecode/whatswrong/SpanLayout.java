@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 /**
- * A SpanLayouy lays out edges as rectangular blocks under or above the tokens that the edge covers. The label is
+ * A SpanLayout lays out edges as rectangular blocks under or above the tokens that the edge covers. The label is
  * written into these blocks. If there are multiple edge types then all spans of the same type appear in the same
  * contiguous vertical area.
  *
